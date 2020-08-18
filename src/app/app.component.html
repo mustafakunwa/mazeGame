@@ -1,5 +1,5 @@
-<div class="container" *ngIf="board.length>0">
-    <div class="col-md-6 table-responsive">
+<div class="container-fluid" *ngIf="board.length>0">
+    <div class="col-md-9 table-responsive">
         <table class="table table-bordered" id="table">
             <tbody>
                 <tr *ngFor="let row of board">
@@ -13,7 +13,7 @@
             </tbody>
         </table>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-3">
         <div class="text-center">
             <h2>Moves:{{moves}}</h2>
         </div>

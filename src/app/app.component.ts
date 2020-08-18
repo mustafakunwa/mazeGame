@@ -58,9 +58,7 @@ export class AppComponent implements OnInit {
             this.board[x][y].sprite = true;
             this.sprite++;
           }
-          else {
-            i--
-          }
+         
         }
         this.mario.row = Math.floor(result.row / 2)
         this.mario.col = Math.floor(result.column / 2)
