@@ -1,0 +1,29 @@
+<div class="container" *ngIf="board.length>0">
+    <div class="col-md-6 table-responsive">
+        <table class="table table-bordered" id="table">
+            <tbody>
+                <tr *ngFor="let row of board">
+                    <td *ngFor="let col of row" width="50px">
+                        <div class="text-center">
+                            <img src="/assets/mashroom.png" *ngIf="col.sprite">
+                            <img src="/assets/mario.png" *ngIf="col.mario">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <div class="text-center">
+            <h2>Moves:{{moves}}</h2>
+        </div>
+        <div class="text-center">
+            <button mat-raised-button color="primary" (click)="up()">Up</button>
+        </div>
+        <div class="text-center">
+            <button mat-raised-button color="primary" (click)="left()">Left</button>
+            <button mat-raised-button color="primary" (click)="down()">Down</button>
+            <button mat-raised-button color="primary" (click)="right()">Right</button>
+        </div>
+    </div>
+</div>
